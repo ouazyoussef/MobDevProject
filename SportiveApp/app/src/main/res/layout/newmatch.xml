@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ff8000"
     tools:context=".MatchActivity">
 
     <TextView
@@ -18,7 +19,7 @@
         android:textColor="@color/black"/>
 
     <EditText
-        android:id="@+id/eventNameET"
+        android:id="@+id/eventName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -37,6 +38,15 @@
         android:textAlignment="center"
         android:textColor="@color/black"/>
 
+    <EditText
+        android:id="@+id/eventDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="date"/>
+
     <TextView
         android:id="@+id/eventTimeTV"
         android:layout_width="wrap_content"
@@ -48,16 +58,45 @@
         android:textAlignment="center"
         android:textColor="@color/black"/>
 
+    <EditText
+        android:id="@+id/eventTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="time"/>
+
+    <TextView
+        android:id="@+id/eventPlaceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Place"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/eventPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="time"/>
+
     <Button
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
-        android:textColor="@color/blue"
-        android:background="@null"
-        android:textStyle="bold"
+        android:backgroundTint="#ff4259"
         android:onClick="saveEventAction"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:textSize="20sp"/>
+
+
 
 </LinearLayout>
