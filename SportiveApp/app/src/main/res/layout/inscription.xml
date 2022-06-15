@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ff8000"
+    tools:context=".AddUser">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_margin="5sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Username"
+            android:textColorHint="#ffffff"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_margin="5sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textColorHint="#ffffff"/>
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_margin="5sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:textColorHint="#ffffff"/>
+
+        <EditText
+            android:id="@+id/BDay"
+            android:layout_margin="5sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="Date de naissance JJ/MM/AAAA"
+            android:textColorHint="#ffffff"/>
+
+        <EditText
+            android:id="@+id/Description"
+            android:layout_margin="5sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="Presente toi, parle de ton poste preferé..."
+            android:textColorHint="#ffffff"
+            android:gravity="top"
+            android:height="200dp"/>
+
+        <CheckBox
+            android:id="@+id/conditions"
+            android:layout_margin="5sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Accepter les conditions d'utilisation"
+            android:textColor="#ffffff"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_margin="5sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/bouton_annuler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ff4259"
+                android:onClick="handleAnnuler"
+                android:text="Annuler"/>
+
+            <Button
+                android:id="@+id/bouton_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ff4259"
+                android:onClick="handleOk"
+                android:text="inscription"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
