@@ -12,6 +12,7 @@ public class Connexion extends Activity {
     private Button btnLogin;
 
     protected void onCreate(Bundle savedInstanceState) {
+
         final EditText usr, passWord;
         final String[] UserName = new String[1];
         final String[] PassWord = { null };
