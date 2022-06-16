@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#543838"
+    android:orientation="vertical"
     tools:context=".MatchActivity">
 
     <TextView
@@ -14,19 +13,19 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Name of the event"
-        android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/eventName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="20sp"
         android:ems="10"
         android:inputType="text"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/eventDateTV"
@@ -35,19 +34,19 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Date"
-        android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/eventDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="20sp"
         android:ems="10"
         android:inputType="date"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/eventTimeTV"
@@ -56,19 +55,19 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Time"
-        android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/eventTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="20sp"
         android:ems="10"
         android:inputType="time"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/eventPlaceTV"
@@ -77,30 +76,30 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Place"
-        android:textSize="20sp"
         android:textAlignment="center"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/eventPlace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="20sp"
         android:ems="10"
         android:inputType="time"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
-        android:layout_marginTop="20dp"
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#ff4259"
         android:onClick="saveEventAction"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20sp"/>
-
+        android:text="Save"
+        android:textSize="20sp" />
 
 
 </LinearLayout>
