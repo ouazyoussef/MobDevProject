@@ -44,5 +44,12 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(MainActivity.this, Connexion.class));
             }
         });
+        Button inscription = findViewById(R.id.inscription);
+        inscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AddUser.class));
+            }
+        });
     }
 }

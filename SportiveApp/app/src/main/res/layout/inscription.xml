@@ -77,7 +77,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"
-                android:onClick="handleAnnuler"
                 android:text="Annuler"/>
 
             <Button
@@ -85,7 +84,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"
-                android:onClick="handleOk"
                 android:text="inscription"
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>

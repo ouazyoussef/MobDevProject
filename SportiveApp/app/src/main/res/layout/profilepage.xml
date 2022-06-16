@@ -67,6 +67,7 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/stats"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"
@@ -74,6 +75,7 @@
                 android:text="Stats" />
 
             <Button
+                android:id="@+id/history"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"
@@ -81,6 +83,7 @@
                 android:text="History" />
 
             <Button
+                android:id="@+id/createMatch"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"
@@ -88,6 +91,7 @@
                 android:text="Create Match" />
 
             <Button
+                android:id="@+id/proximityStade"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"
@@ -95,6 +99,7 @@
                 android:text="Stades Proximité" />
 
             <Button
+                android:id="@+id/deconnexion"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"

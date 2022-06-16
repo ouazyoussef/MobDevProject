@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SportiveApp">
         <activity
+            android:name=".profilePage"
+            android:exported="false" />
+        <activity
+            android:name=".CreateMatch"
+            android:exported="false" />
+        <activity
             android:name=".Connexion"
             android:exported="false" />
         <activity
