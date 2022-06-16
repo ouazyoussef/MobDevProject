@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         Button btn = findViewById(R.id.btn);
 
+        DBManagement db = new DBManagement();
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

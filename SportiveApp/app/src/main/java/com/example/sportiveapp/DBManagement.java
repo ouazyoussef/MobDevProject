@@ -1,38 +1,54 @@
 package com.example.sportiveapp;
 
+import android.annotation.SuppressLint;
+import android.os.Looper;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.util.ArrayList;
+import java.util.logging.Handler;
 
 public class DBManagement {
 
+
     public DBManagement() {
-
-        try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/androidprj", "root", "");
-
-            String sql = "SELECT * FROM MyTable";
-            PreparedStatement statement = connection.prepareStatement(sql);
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()) {
-                String first = resultSet.getString("username");
-                String second = resultSet.getString("email");
-
-                Log.d("First: ",first);
-                Log.d("Second: ",second);
-
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        this.fff();
     }
 
-    public static void main(String[] args) {
-        DBManagement db = new DBManagement();
+    public void fff() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    Connection connection = DriverManager.getConnection("jdbc:mysql://10.0.2.2:3306/androidprj", "root", "");
+                    // ResultSet result = myDB.yourSelectQuery();
+                    String sql = "SELECT * FROM users";
+                    PreparedStatement statement = connection.prepareStatement(sql);
+                    ResultSet result = statement.executeQuery();
+                    //Stores properties of a ResultSet object, including column count
+                    ResultSetMetaData rsmd = result.getMetaData();
+                    int columnCount = rsmd.getColumnCount();
+
+                    ArrayList<String> arrayResult = new ArrayList<>(columnCount);
+                    while (result.next()) {
+                        int i = 1;
+                        while (i <= columnCount) {
+                            arrayResult.add(result.getString(i++));
+                        }
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }}).start();
+
     }
 }
