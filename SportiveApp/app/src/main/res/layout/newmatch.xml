@@ -86,7 +86,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:inputType="time"
         android:textColor="@color/white"
         android:textSize="20sp" />
 
@@ -97,7 +96,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:backgroundTint="#ff4259"
-        android:onClick="saveEventAction"
         android:text="Save"
         android:textSize="20sp" />
 

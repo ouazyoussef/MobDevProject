@@ -12,10 +12,10 @@ public class profilePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profilepage);
-        Button Stats, History, CreateMatch, ProximityStade;
+        Button Stats, History, Creatematchs, ProximityStade;
         Stats = findViewById(R.id.stats);
         History = findViewById(R.id.history);
-        CreateMatch = findViewById(R.id.createMatch);
+        Creatematchs = findViewById(R.id.createMatch);
         ProximityStade = findViewById(R.id.proximityStade);
         Stats.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +29,7 @@ public class profilePage extends AppCompatActivity {
                 startActivity(new Intent(profilePage.this, History.class));
             }
         });
-        CreateMatch.setOnClickListener(new View.OnClickListener() {
+        Creatematchs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(profilePage.this, CreateMatch.class));
@@ -41,6 +41,5 @@ public class profilePage extends AppCompatActivity {
                 startActivity(new Intent(profilePage.this, ProximityStade.class));
             }
         });
-
     }
 }

@@ -25,7 +25,10 @@ public class Connexion extends Activity {
             public void onClick(View view) {
                 UserName[0] = usr.getText().toString();
                 PassWord[0] = passWord.getText().toString();
-                startActivity(new Intent(Connexion.this, profilePage.class));
+                System.out.println("Result : " + new DBManagement().UserIsReal(UserName[0],PassWord[0]));
+                //
+                // startActivity(new Intent(Connexion.this, profilePage.class));
+
                 /*if(DBCheck) {
                 startActivity
 

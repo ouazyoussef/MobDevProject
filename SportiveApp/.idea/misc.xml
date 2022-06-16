@@ -3,16 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/activity_location.xml" value="0.1" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/activity_proximity_stade.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/activity_stats.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/connexion.xml" value="0.1" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/history.xml" value="0.1" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/inscription.xml" value="0.1" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/newmatch.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Marwan TOUFIQ/Documents/C#/MobDevProject/SportiveApp/app/src/main/res/layout/profilepage.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Shariar/Documents/AndroidProject/MobDevProject/SportiveApp/app/src/main/res/layout/activity_location.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Shariar/Documents/AndroidProject/MobDevProject/SportiveApp/app/src/main/res/layout/activity_main.xml" value="0.15896739130434784" />
         <entry key="..\:/Users/Shariar/Documents/AndroidProject/MobDevProject/SportiveApp/app/src/main/res/layout/activity_maps.xml" value="0.17831813576494426" />
@@ -22,6 +12,7 @@
         <entry key="..\:/Users/Shariar/Documents/MobApp/MobDevProject/SportiveApp/app/src/main/res/layout/activity_location.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/Shariar/Documents/MobApp/MobDevProject/SportiveApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Shariar/Documents/MobApp/MobDevProject/SportiveApp/app/src/main/res/layout/connexion.xml" value="0.33" />
+        <entry key="..\:/Users/Shariar/Documents/MobApp/MobDevProject/SportiveApp/app/src/main/res/layout/history.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/Shariar/Documents/MobApp/MobDevProject/SportiveApp/app/src/main/res/layout/inscription.xml" value="0.1" />
         <entry key="..\:/Users/Shariar/Documents/MobApp/MobDevProject/SportiveApp/app/src/main/res/layout/nav_header_main.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/Shariar/Documents/MobApp/MobDevProject/SportiveApp/app/src/main/res/layout/newmatch.xml" value="0.14722222222222223" />
