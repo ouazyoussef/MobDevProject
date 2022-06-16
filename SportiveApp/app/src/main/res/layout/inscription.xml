@@ -39,12 +39,11 @@
 
         <EditText
             android:id="@+id/BDay"
-            android:layout_margin="5sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:inputType="date"
+            android:layout_margin="5sp"
             android:hint="Date de naissance JJ/MM/AAAA"
-            android:textColorHint="#ffffff"/>
+            android:textColorHint="#ffffff" />
 
         <EditText
             android:id="@+id/Description"

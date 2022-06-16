@@ -15,12 +15,31 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Handler;
 
 public class DBManagement extends AsyncTask<String, Void, String> {
     Connection connection;
+    public void CreateUser(String Usr, String Pwd, String Mail, String DateNaissance, String Bio){
+        String requete = "INSERT INTO users VALUES " + "('" + Usr + "'," + "'" + Mail + "'," + "'" + Pwd + "'," + "'" + Bio + "','"  + DateNaissance + "')";
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    connection = DriverManager.getConnection("jdbc:mysql://10.0.2.2:3306/androidprj", "root", "");
+                    System.out.println("Statement + " + requete);
+                    Statement statement = connection.createStatement();
+                    statement.executeUpdate(requete);
+                    connection.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
     public boolean UserIsReal(String Usr, String Pwd){
         final boolean[] isConnected = {false};
 
