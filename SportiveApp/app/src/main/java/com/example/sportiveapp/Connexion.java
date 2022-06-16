@@ -26,15 +26,13 @@ public class Connexion extends Activity {
                 UserName[0] = usr.getText().toString();
                 PassWord[0] = passWord.getText().toString();
                 String requete = "SELECT * FROM users where username = '" + UserName[0] + "' and pwd = '" + UserName[0] + "';";
-                boolean a = new DBManagement().UserIsReal(UserName[0], PassWord[0]);
-                System.out.println("is user connected " + a);
-                //
-                // startActivity(new Intent(Connexion.this, profilePage.class));
+                boolean isConnected = new DBManagement().UserIsReal(UserName[0], PassWord[0]);
 
-                /*if(DBCheck) {
-                startActivity
-
-                }*/
+                if(isConnected) {
+                    Intent i = new Intent(Connexion.this, profilePage.class);
+                    i.putExtra("UserConnected",UserName[0]);
+                    startActivity(i);
+                }
 
 
             }

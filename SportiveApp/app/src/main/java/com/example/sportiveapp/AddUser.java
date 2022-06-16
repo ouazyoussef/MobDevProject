@@ -45,6 +45,8 @@ public class AddUser extends Activity {
                         System.out.println("Accepter les conditions");
                     } else {
                         System.out.println("Creation nouvel user");
+                        new DBManagement().CreateUser(user[0], pwd[0], email[0], dateOfBirth[0], description[0]);
+                        System.out.println("User crée");
                         finish();
                     }
                 }
