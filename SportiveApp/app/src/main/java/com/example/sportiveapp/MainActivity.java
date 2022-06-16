@@ -22,11 +22,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends Activity {
 
 
+    //Button inscription = findViewById(R.id.inscription);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button btn = findViewById(R.id.btn);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,12 +37,12 @@ public class MainActivity extends Activity {
             }
         });
 
-    }
-
-
-    public void connexion(View view) {
-    }
-
-    public void inscription(View view) {
+        Button connexion = findViewById(R.id.connexion);
+        connexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Connexion.class));
+            }
+        });
     }
 }
