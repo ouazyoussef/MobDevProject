@@ -10,4 +10,38 @@
     <string name="match_won">Won</string>
     <string name="match_lost">Lost</string>
     <string name="match_not_finished">Is it not finished</string>
+    <string name="main_login">Login</string>
+    <string name="main_signup">Sign-up</string>
+    <string name="proximity_stade_title">Proximity stadiums</string>
+    <string name="proximity_stade_address_line">Address Line:</string>
+    <string name="proximity_stade_lat" translatable="false">Latitude:</string>
+    <string name="proximity_stade_long" translatable="false">Longitude:</string>
+    <string name="proximity_stade_get">Get location</string>
+    <string name="connection_username">Username or email</string>
+    <string name="connection_password">Password</string>
+    <string name="signup_username">Username</string>
+    <string name="signup_password">Password</string>
+    <string name="signup_email">Email</string>
+    <string name="signup_birth_date">Birth date (DD/MM/YYYY)</string>
+    <string name="signup_bio">Please enter a small description of yourself</string>
+    <string name="signup_approve_conditions">Approve conditions</string>
+    <string name="signup_cancel">Cancel</string>
+    <string name="signup_signup">Sign-up</string>
+    <string name="profile_stats">Statistics</string>
+    <string name="profile_history">History</string>
+    <string name="profile_create_match">Create a match</string>
+    <string name="profile_proximity_stade">Proximity stadiums</string>
+    <string name="profile_logout">Log-out</string>
+    <string name="new_match_name">Name of the event</string>
+    <string name="new_match_date">Date</string>
+    <string name="new_match_time">Time</string>
+    <string name="new_match_place">Place</string>
+    <string name="new_match_save">Create</string>
+    <string name="stats_match">Number of matches played</string>
+    <string name="stats_match_won">Number of matches winned</string>
+    <string name="stats_match_lost">Number of matches lost</string>
+    <string name="stats_match_incomming">Number of matches incomming</string>
+    <string name="stats_match_ratio">Ratio (win / lost)</string>
+    <string name="stats_back">Back</string>
+    <string name="stats_logout">Log-out</string>
 </resources>

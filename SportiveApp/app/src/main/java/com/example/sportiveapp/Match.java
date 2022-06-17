@@ -1,6 +1,5 @@
 package com.example.sportiveapp;
 
-import android.annotation.SuppressLint;
 import android.content.res.Resources;
 
 public class Match {
@@ -25,7 +24,6 @@ public class Match {
         return res.getString(R.string.match_lost);
     }
 
-    @SuppressLint("StringFormatInvalid")
     public String toString() {
         return String.format(res.getString(R.string.match_played), this.username, this.dateMatch, this.winOrLose());
     }

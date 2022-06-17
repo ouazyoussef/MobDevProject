@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Name of the event"
+        android:text="@string/new_match_name"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp" />
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Date"
+        android:text="@string/new_match_date"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp" />
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Time"
+        android:text="@string/new_match_time"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp" />
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Place"
+        android:text="@string/new_match_place"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp" />
@@ -96,7 +96,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:backgroundTint="#ff4259"
-        android:text="Save"
+        android:text="@string/new_match_save"
         android:textSize="20sp" />
 
 

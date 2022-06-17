@@ -12,57 +12,57 @@
 
         <EditText
             android:id="@+id/username"
-            android:layout_margin="5sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:hint="@string/signup_username"
             android:inputType="text"
-            android:hint="Username"
-            android:textColorHint="#ffffff"/>
+            android:textColorHint="#ffffff" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_margin="5sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:hint="@string/signup_password"
             android:inputType="textPassword"
-            android:hint="Password"
-            android:textColorHint="#ffffff"/>
+            android:textColorHint="#ffffff" />
 
         <EditText
             android:id="@+id/Email"
-            android:layout_margin="5sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:hint="@string/signup_email"
             android:inputType="textEmailAddress"
-            android:hint="Email"
-            android:textColorHint="#ffffff"/>
+            android:textColorHint="#ffffff" />
 
         <EditText
             android:id="@+id/BDay"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
-            android:hint="Date de naissance JJ/MM/AAAA"
+            android:hint="@string/signup_birth_date"
             android:textColorHint="#ffffff" />
 
         <EditText
             android:id="@+id/Description"
-            android:layout_margin="5sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:hint="Presente toi, parle de ton poste preferé..."
-            android:textColorHint="#ffffff"
+            android:layout_margin="5sp"
+            android:height="200dp"
             android:gravity="top"
-            android:height="200dp"/>
+            android:hint="@string/signup_bio"
+            android:inputType="textMultiLine"
+            android:textColorHint="#ffffff" />
 
         <CheckBox
             android:id="@+id/conditions"
-            android:layout_margin="5sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Accepter les conditions d'utilisation"
-            android:textColor="#ffffff"/>
+            android:layout_margin="5sp"
+            android:text="@string/signup_approve_conditions"
+            android:textColor="#ffffff" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_margin="5sp"
@@ -76,15 +76,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"
-                android:text="Annuler"/>
+                android:text="@string/signup_cancel" />
 
             <Button
                 android:id="@+id/bouton_ok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff4259"
-                android:text="inscription"
-                />
+                android:text="@string/signup_signup" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>

@@ -24,16 +24,15 @@
             android:id="@+id/connexion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Connexion"
             android:backgroundTint="#ff4259"
-            />
+            android:text="@string/main_login" />
+
         <Button
             android:id="@+id/inscription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inscription"
             android:backgroundTint="#ff4259"
-            />
+            android:text="@string/main_signup" />
 
     </LinearLayout>
 </LinearLayout>
