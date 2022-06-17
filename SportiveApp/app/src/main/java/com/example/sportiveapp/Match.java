@@ -27,6 +27,6 @@ public class Match {
 
     @SuppressLint("StringFormatInvalid")
     public String toString() {
-        return String.format(res.getString(R.string.match_lost), this.username, this.dateMatch, this.winOrLose());
+        return String.format(res.getString(R.string.match_played), this.username, this.dateMatch, this.winOrLose());
     }
 }
