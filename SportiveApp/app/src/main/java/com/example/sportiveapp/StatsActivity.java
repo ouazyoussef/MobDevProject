@@ -24,6 +24,7 @@ public class StatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stats);
         // on a assigne les buttons
+
         this.home = findViewById(R.id.Home);
         this.deconnexion = findViewById(R.id.deconnexion);
 
@@ -33,13 +34,25 @@ public class StatsActivity extends AppCompatActivity {
         this.incoming = findViewById(R.id.Incoming2);
         this.ratioWin = findViewById(R.id.ratioWin2);
 
+        Bundle extras = getIntent().getExtras();
+        String value = "";
+
+        if (extras != null) {
+            value = extras.getString("UserConnected3");
+
+        }
+
+        int playedMatch = new DBManagement().getMatchPlayed(value);
+        int WonMatch = new DBManagement().getMatchWon(value);
+        played.setText(playedMatch + "");
+        winned.setText(WonMatch+ "");
+        lost.setText(playedMatch - WonMatch+ "");
+        ratioWin.setText((float)(WonMatch/playedMatch)+ "");
 
         this.home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(StatsActivity.this,profilePage.class);
-                i.putExtra("UserConnected",UserName[0]);
-                startActivity(i);
+
             }
         });
 

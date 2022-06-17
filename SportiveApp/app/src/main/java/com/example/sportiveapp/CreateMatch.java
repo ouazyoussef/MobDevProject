@@ -24,6 +24,14 @@ public class CreateMatch extends Activity {
         Date = findViewById(R.id.eventDate);
         Temps = findViewById(R.id.eventTime);
         Validate = findViewById(R.id.btnSave);
+        Bundle extras = getIntent().getExtras();
+        String value = "";
+
+        if (extras != null) {
+            value = extras.getString("UserConnected4");
+
+        }
+        String finalValue = value;
         Validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +41,7 @@ public class CreateMatch extends Activity {
                 temps[0] = Temps.getText().toString();
                 //send to DB
                 System.out.println("Event : " + eventname[0] + " Created");
+                new DBManagement().CreateMatch(finalValue, "date");
                 finish();
             }
         });

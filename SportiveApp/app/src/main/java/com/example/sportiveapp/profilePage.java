@@ -16,7 +16,7 @@ public class profilePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profilepage);
         Bundle extras = getIntent().getExtras();
-        String value = null;
+        String value = "";
         if (extras != null) {
             value = extras.getString("UserConnected");
 
@@ -30,13 +30,17 @@ public class profilePage extends AppCompatActivity {
         Creatematchs = findViewById(R.id.createMatch);
         ProximityStade = findViewById(R.id.proximityStade);
         FullName.setText(value);
+        String finalValue = value;
         Stats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(profilePage.this, StatsActivity.class));
+                System.out.println(" Send value " + finalValue);
+                Intent i = new Intent(profilePage.this, StatsActivity.class);
+                i.putExtra("UserConnected3", finalValue);
+                startActivity(i);
             }
         });
-        String finalValue = value;
+
         History.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +54,11 @@ public class profilePage extends AppCompatActivity {
         Creatematchs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(profilePage.this, CreateMatch.class));
+                System.out.println(" Send value " + finalValue);
+                Intent i = new Intent(profilePage.this, CreateMatch.class);
+                i.putExtra("UserConnected4", finalValue);
+                startActivity(i);
+
             }
         });
         ProximityStade.setOnClickListener(new View.OnClickListener() {

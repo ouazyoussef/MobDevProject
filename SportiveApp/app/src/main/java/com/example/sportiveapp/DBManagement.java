@@ -14,7 +14,107 @@ import java.util.concurrent.TimeUnit;
 public class DBManagement extends AsyncTask<String, Void, String>
 {
     Connection connection;
-    String chain = null;
+    String chain = "";
+    int playedMatch = 0;
+    int WinnedMatch = 0;
+
+    public void CreateMatch(String Usr, String dat){
+        String requete = "Insert into matchs values(MD5(RAND())," + "'"+Usr + "'"+ ","+ "'" +dat + "'"+ ", 2);";
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    connection = DriverManager.getConnection("jdbc:mysql://10.0.2.2:3306/androidprj", "root", "");
+                    System.out.println("Statement + " + requete);
+                    Statement statement = connection.createStatement();
+                    statement.executeUpdate(requete);
+                    connection.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+    }
+    public int getMatchWon (String user){
+        String requete = "Select count(*) from matchs where username = " + "'"+ user + "'" + "and wol = '1'";
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    connection = DriverManager.getConnection("jdbc:mysql://10.0.2.2:3306/androidprj", "root", "");
+                    System.out.println("Statement + " + requete);
+                    PreparedStatement statement = connection.prepareStatement(requete);
+                    System.out.println("result rq");
+                    ResultSet result = statement.executeQuery();
+                    System.out.println("rsmd rq");
+                    ResultSetMetaData rsmd = result.getMetaData();
+                    int columnCount = rsmd.getColumnCount();
+                    while (result.next()) {
+                        int i = 1;
+                        while (i <= columnCount) {
+                            WinnedMatch = result.getInt(i++);
+                        }
+                    }
+                    System.out.println("Close connection WinnedMatch " + WinnedMatch);
+                    connection.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
+
+
+            }
+
+        }).start();
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Print WinnedMatch before return " + WinnedMatch);
+        return WinnedMatch;
+    }
+
+    public int getMatchPlayed (String user){
+        String requete = "Select count(*) from matchs where username = " + "'"+ user + "'";
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    connection = DriverManager.getConnection("jdbc:mysql://10.0.2.2:3306/androidprj", "root", "");
+                    System.out.println("Statement + " + requete);
+                    PreparedStatement statement = connection.prepareStatement(requete);
+                    System.out.println("result rq");
+                    ResultSet result = statement.executeQuery();
+                    System.out.println("rsmd rq");
+                    ResultSetMetaData rsmd = result.getMetaData();
+                    int columnCount = rsmd.getColumnCount();
+                    while (result.next()) {
+                        int i = 1;
+                        while (i <= columnCount) {
+                            playedMatch = result.getInt(i++);
+                        }
+                    }
+                    System.out.println("Close connection playedMatch " + playedMatch);
+                    connection.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Print playedMatch before return " + playedMatch);
+        return playedMatch;
+    }
     public String getHistory(String user){
         String requete = "Select * from matchs where username =" + "'"+ user + "'";
         new Thread(new Runnable() {
@@ -37,7 +137,7 @@ public class DBManagement extends AsyncTask<String, Void, String>
                         int i = 1;
                         while (i <= columnCount) {
 
-                            chain = chain + result.getString(i++) + ";";
+                            chain = chain + result.getString(i++) + "-";
                             System.out.println(chain);
 
                         }
@@ -62,7 +162,7 @@ public class DBManagement extends AsyncTask<String, Void, String>
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+        System.out.println("Print chain before return " + chain);
         return chain;
     }
     public void CreateUser(String Usr, String Pwd, String Mail, String DateNaissance, String Bio){
