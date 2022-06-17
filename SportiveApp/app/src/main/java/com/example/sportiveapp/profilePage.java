@@ -24,7 +24,7 @@ public class profilePage extends AppCompatActivity {
 
     private TextView FullName;
     private ImageView imgView;
-    private Button Stats, History, Creatematchs, ProximityStade, Disconnect;
+    private Button Stats, History, Creatematchs, ProximityStade, Disconnect, btnPhoto;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +50,7 @@ public class profilePage extends AppCompatActivity {
         this.ProximityStade = findViewById(R.id.proximityStade);
         this.FullName.setText(value);
         this.imgView = findViewById(R.id.header_cover_image);
-
+        this.btnPhoto = findViewById(R.id.btnImage);
         String finalValue = value;
 
         this.imgView.setOnClickListener(view -> {
@@ -91,6 +91,15 @@ public class profilePage extends AppCompatActivity {
         this.Disconnect.setOnClickListener(view -> {
             Intent i = new Intent(profilePage.this, MainActivity.class);
             startActivity(i);
+        });
+        this.btnPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent();
+                i.setAction(MediaStore.ACTION_IMAGE_CAPTURE_SECURE);
+                startActivity(i);
+
+            }
         });
     }
 
