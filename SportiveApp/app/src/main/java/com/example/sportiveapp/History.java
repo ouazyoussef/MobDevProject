@@ -32,7 +32,7 @@ public class History extends Activity {
             for (int i = 0; i < splitMatch.length; i++) {
                 System.out.println("splitmatch : " + splitMatch[i]);
                 String[] splitedData = splitMatch[i].split("-");
-                String a = new Match(getResources(),splitedData[1], splitedData[2], splitedData[3]).toString();
+                String a = new Match(getResources(),    splitedData[1], splitedData[2], splitedData[3]).toString();
                 matchesDescription.add(a);
             }
 
