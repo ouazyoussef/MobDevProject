@@ -48,7 +48,10 @@ public class StatsActivity extends AppCompatActivity {
         this.played.setText(playedMatch + "");
         this.winned.setText(WonMatch+ "");
         this.lost.setText(playedMatch - WonMatch+ "");
-        this.ratioWin.setText((float)(WonMatch/playedMatch)+ "");
+        if (playedMatch != 0) {
+            this.ratioWin.setText((float) (WonMatch / playedMatch) + "");
+        } else
+            this.ratioWin.setText(0 + "");
 
         this.home.setOnClickListener(new View.OnClickListener() {
             @Override
