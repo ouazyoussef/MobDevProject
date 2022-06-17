@@ -22,27 +22,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends Activity {
 
-
-    //Button inscription = findViewById(R.id.inscription);
+    private Button inscription, connexion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         DBManagement db = new DBManagement();
 
+        this.inscription = findViewById(R.id.inscription);
+        this.connexion = findViewById(R.id.connexion);
 
-
-        Button connexion = findViewById(R.id.connexion);
-        connexion.setOnClickListener(new View.OnClickListener() {
+        this.connexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Connexion.class));
             }
         });
-        Button inscription = findViewById(R.id.inscription);
+
         inscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

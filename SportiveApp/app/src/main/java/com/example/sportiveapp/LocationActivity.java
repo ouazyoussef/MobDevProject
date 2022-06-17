@@ -33,12 +33,14 @@ public class LocationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
+
         btn = findViewById(R.id.btn_locate);
         textView1 = findViewById(R.id.textView);
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
         textView4 = findViewById(R.id.textView4);
         textView5 = findViewById(R.id.textView5);
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -18,42 +18,55 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import java.util.Random;
+
 public class profilePage extends AppCompatActivity {
-    TextView FullName;
-    static ImageView imgView = null;
+
+    private TextView FullName;
+    private ImageView imgView;
+    private Button Stats, History, Creatematchs, ProximityStade, Disconnect;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profilepage);
+
         if (ContextCompat.checkSelfPermission(profilePage.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(profilePage.this, new String[]{
                     Manifest.permission.CAMERA
             }, 100);
         }
-        /*imgView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 100);
-            }
-        });*/
 
         Bundle extras = getIntent().getExtras();
         String value = "";
         if (extras != null) {
             value = extras.getString("UserConnected");
-
         }
-        System.out.println("Getted value " + value);
-        Button Stats, History, Creatematchs, ProximityStade, Disconnect;
-        Disconnect = findViewById(R.id.deconnexion);
-        FullName = findViewById(R.id.user_profile_name);
-        Stats = findViewById(R.id.stats);
-        History = findViewById(R.id.history);
-        Creatematchs = findViewById(R.id.createMatch);
-        ProximityStade = findViewById(R.id.proximityStade);
-        FullName.setText(value);
+
+        this.Disconnect = findViewById(R.id.deconnexion);
+        this.FullName = findViewById(R.id.user_profile_name);
+        this.Stats = findViewById(R.id.stats);
+        this.History = findViewById(R.id.history);
+        this.Creatematchs = findViewById(R.id.createMatch);
+        this.ProximityStade = findViewById(R.id.proximityStade);
+        this.FullName.setText(value);
+        this.imgView = findViewById(R.id.header_cover_image);
+
         String finalValue = value;
-        Stats.setOnClickListener(new View.OnClickListener() {
+
+        this.imgView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int random = (new Random()).nextInt(100);
+                if (random%5 == 0)
+                    imgView.setImageResource(R.mipmap.sui_foreground);
+                if (random%3 == 0)
+                    imgView.setImageResource(R.mipmap.messi_foreground);
+                if (random%2 == 0)
+                    imgView.setImageResource(R.mipmap.ney_foreground);
+            }
+        });
+
+        this.Stats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 System.out.println(" Send value " + finalValue);
@@ -63,7 +76,7 @@ public class profilePage extends AppCompatActivity {
             }
         });
 
-        History.setOnClickListener(new View.OnClickListener() {
+        this.History.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 System.out.println(" Send value " + finalValue);
@@ -73,7 +86,8 @@ public class profilePage extends AppCompatActivity {
 
             }
         });
-        Creatematchs.setOnClickListener(new View.OnClickListener() {
+
+        this.Creatematchs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 System.out.println(" Send value " + finalValue);
@@ -83,21 +97,19 @@ public class profilePage extends AppCompatActivity {
 
             }
         });
-        ProximityStade.setOnClickListener(new View.OnClickListener() {
+
+        this.ProximityStade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(profilePage.this, ProximityStade.class));
             }
         });
 
-        Disconnect.setOnClickListener(new View.OnClickListener() {
+        this.Disconnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent i = new Intent(profilePage.this, MainActivity.class);
-
                 startActivity(i);
-
             }
         });
     }

@@ -9,29 +9,32 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 
 public class CreateMatch extends Activity {
+    private EditText EventName, Place, Date, Temps;
+    private Button Validate;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newmatch);
+
         final String[] eventname = new String[1];
         final String[] place = new String[1];
         final String[] date = new String[1];
         final String[] temps = new String[1];
-        EditText EventName, Place, Date, Temps;
-        Button Validate;
-        EventName = findViewById(R.id.eventName);
-        Place = findViewById(R.id.eventPlace);
-        Date = findViewById(R.id.eventDate);
-        Temps = findViewById(R.id.eventTime);
-        Validate = findViewById(R.id.btnSave);
+
+        this.EventName = findViewById(R.id.eventName);
+        this.Place = findViewById(R.id.eventPlace);
+        this.Date = findViewById(R.id.eventDate);
+        this.Temps = findViewById(R.id.eventTime);
+        this.Validate = findViewById(R.id.btnSave);
+
         Bundle extras = getIntent().getExtras();
         String value = "";
-
         if (extras != null) {
             value = extras.getString("UserConnected4");
-
         }
+
         String finalValue = value;
+
         Validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,7 +48,5 @@ public class CreateMatch extends Activity {
                 finish();
             }
         });
-
-
     }
 }

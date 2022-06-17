@@ -10,17 +10,19 @@ import android.widget.TextView;
 
 public class Connexion extends Activity {
     private Button btnLogin;
+    private EditText usr, passWord;
 
     protected void onCreate(Bundle savedInstanceState) {
-
-        final EditText usr, passWord;
         final String[] UserName = new String[1];
         final String[] PassWord = { null };
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.connexion);
-        btnLogin = findViewById(R.id.btnLogin);
-        usr = findViewById(R.id.userName);
-        passWord = findViewById(R.id.pswd);
+
+        this.btnLogin = findViewById(R.id.btnLogin);
+        this.usr = findViewById(R.id.userName);
+        this.passWord = findViewById(R.id.pswd);
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,8 +36,6 @@ public class Connexion extends Activity {
                     i.putExtra("UserConnected",UserName[0]);
                     startActivity(i);
                 }
-
-
             }
         });
     }

@@ -19,12 +19,9 @@ public class Match {
     public String winOrlose() {
         if (this.wol.equals("1"))
             return "Won";
-        else {
-            if (this.wol.equals("2"))
+        else if (this.wol.equals("2"))
                 return "is comming";
-            else
-                return "Lost";
-        }
+        return "Lost";
     }
 
     public String toString() {

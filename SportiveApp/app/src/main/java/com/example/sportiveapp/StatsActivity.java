@@ -44,10 +44,11 @@ public class StatsActivity extends AppCompatActivity {
 
         int playedMatch = new DBManagement().getMatchPlayed(value);
         int WonMatch = new DBManagement().getMatchWon(value);
-        played.setText(playedMatch + "");
-        winned.setText(WonMatch+ "");
-        lost.setText(playedMatch - WonMatch+ "");
-        ratioWin.setText((float)(WonMatch/playedMatch)+ "");
+
+        this.played.setText(playedMatch + "");
+        this.winned.setText(WonMatch+ "");
+        this.lost.setText(playedMatch - WonMatch+ "");
+        this.ratioWin.setText((float)(WonMatch/playedMatch)+ "");
 
         this.home.setOnClickListener(new View.OnClickListener() {
             @Override
