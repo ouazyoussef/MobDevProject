@@ -2,7 +2,7 @@
 <resources>
     <string name="approve_conditions">Approuver les conditions</string>
     <string name="user_created">Utilisateur créé</string>
-    <string name="match_played">Tu (%2$s) as joué le %2$s et %3$s.</string>
+    <string name="match_played">Tu (%1$s) as joué le %2$s et %3$s.</string>
     <string name="match_won">Gagné</string>
     <string name="match_lost">Perdu</string>
     <string name="match_not_finished">Il est toujours en cours</string>
