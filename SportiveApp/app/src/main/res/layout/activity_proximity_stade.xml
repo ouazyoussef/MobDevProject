@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MatchDetailActivity">
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,6 +72,12 @@
         android:layout_gravity="center"
         android:ems="10"
         android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 
 </LinearLayout>
