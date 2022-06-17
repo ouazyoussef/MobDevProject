@@ -29,16 +29,11 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btn = findViewById(R.id.btn);
+
 
         DBManagement db = new DBManagement();
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, LocationActivity.class));
-            }
-        });
+
 
         Button connexion = findViewById(R.id.connexion);
         connexion.setOnClickListener(new View.OnClickListener() {
