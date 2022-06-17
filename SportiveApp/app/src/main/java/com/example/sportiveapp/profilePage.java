@@ -53,64 +53,44 @@ public class profilePage extends AppCompatActivity {
 
         String finalValue = value;
 
-        this.imgView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int random = (new Random()).nextInt(100);
-                if (random%5 == 0)
-                    imgView.setImageResource(R.mipmap.sui_foreground);
-                if (random%3 == 0)
-                    imgView.setImageResource(R.mipmap.messi_foreground);
-                if (random%2 == 0)
-                    imgView.setImageResource(R.mipmap.ney_foreground);
-            }
+        this.imgView.setOnClickListener(view -> {
+            int random = (new Random()).nextInt(100);
+            if (random%5 == 0)
+                imgView.setImageResource(R.mipmap.sui_foreground);
+            if (random%3 == 0)
+                imgView.setImageResource(R.mipmap.messi_foreground);
+            if (random%2 == 0)
+                imgView.setImageResource(R.mipmap.ney_foreground);
         });
 
-        this.Stats.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                System.out.println(" Send value " + finalValue);
-                Intent i = new Intent(profilePage.this, StatsActivity.class);
-                i.putExtra("UserConnected3", finalValue);
-                startActivity(i);
-            }
+        this.Stats.setOnClickListener(view -> {
+            System.out.println(" Send value " + finalValue);
+            Intent i = new Intent(profilePage.this, StatsActivity.class);
+            i.putExtra("UserConnected3", finalValue);
+            startActivity(i);
         });
 
-        this.History.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                System.out.println(" Send value " + finalValue);
-                Intent i = new Intent(profilePage.this, History.class);
-                i.putExtra("UserConnected2", finalValue);
-                startActivity(i);
+        this.History.setOnClickListener(view -> {
+            System.out.println(" Send value " + finalValue);
+            Intent i = new Intent(profilePage.this, History.class);
+            i.putExtra("UserConnected2", finalValue);
+            startActivity(i);
 
-            }
         });
 
-        this.Creatematchs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                System.out.println(" Send value " + finalValue);
-                Intent i = new Intent(profilePage.this, CreateMatch.class);
-                i.putExtra("UserConnected4", finalValue);
-                startActivity(i);
+        this.Creatematchs.setOnClickListener(view -> {
+            System.out.println(" Send value " + finalValue);
+            Intent i = new Intent(profilePage.this, CreateMatch.class);
+            i.putExtra("UserConnected4", finalValue);
+            startActivity(i);
 
-            }
         });
 
-        this.ProximityStade.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(profilePage.this, ProximityStade.class));
-            }
-        });
+        this.ProximityStade.setOnClickListener(view -> startActivity(new Intent(profilePage.this, ProximityStade.class)));
 
-        this.Disconnect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(profilePage.this, MainActivity.class);
-                startActivity(i);
-            }
+        this.Disconnect.setOnClickListener(view -> {
+            Intent i = new Intent(profilePage.this, MainActivity.class);
+            startActivity(i);
         });
     }
 

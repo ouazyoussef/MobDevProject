@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class History extends Activity {
 
     private ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +29,14 @@ public class History extends Activity {
 
         String[] splitMatch = HistoryMatch.split("\\|");
 
-        for (int i = 0; i < splitMatch.length; i++) {
-            System.out.println("splitmatch : "+splitMatch[i]);
-            String[] splitedData = splitMatch[i].split("-");
-            String a = new Match(splitedData[1], splitedData[2],splitedData[3]).toString();
+        for (String match : splitMatch) {
+            System.out.println("splitmatch : " + match);
+            String[] splitedData = match.split("-");
+            String a = new Match(getResources(), splitedData[1], splitedData[2], splitedData[3]).toString();
             matchesDescription.add(a);
         }
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, matchesDescription);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, matchesDescription);
         this.listView.setAdapter(adapter);
     }
 }
